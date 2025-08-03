@@ -1,8 +1,8 @@
-const port = process.env.PORT || 3000;
 const jwt = require("jsonwebtoken")
 require("dotenv").config()
 const express = require("express")
 const app = express()
+const port = process.env.PORT || 3000;
 const bcrypt = require("bcrypt")
 const cookieParser = require("cookie-parser")
 const path = require("path");

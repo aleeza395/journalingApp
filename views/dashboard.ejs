@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("includes/head") %>
+  <body>
+    <%- include("includes/header") %>
+    <main class="content" id="dashboard">
+      <h2>Your journals</h2>
+      <% if (journals.length > 0) { %>
+      <% journals.forEach(journal => { %>
+        <div id="singlejournal">
+          <h3><%= journal.title %></h3>
+          <p><%= journal.content %></p>
+        </div>
+      <% }) %>
+      <% } else { %>
+        <br>
+      <p>You haven't write anything yet</p>
+      <br>
+      <% } %>
+      <h2>The stories you have written so far</h2>
+      <% if (stories.length > 0) { %>
+      <% stories.forEach(story => { %>
+        <div id="singlejournal">
+          <h3><%= story.title %></h3>
+          <p><%= story.content %></p>
+        </div>
+      <% }) %>
+      <% } else { %>
+        <br>
+      <p>You haven't write anything yet</p>
+      <br>
+      <% } %>
+      <h2>The books that you read or on your list</h2>
+      <% if (books.length > 0) { %>
+      <% books.forEach(book => { %>
+        <div id="singlejournal">
+          <form action="/togglecheck/<%= book.id %>" method="POST">
+            <input type="checkbox" value=1 name="checked" onchange="this.form.submit()" <%= book.checked ? "checked" : "" %>>
+          </form>
+          <h3><%= book.title %></h3>
+          <p><%= book.content %></p>
+        </div>
+      <% }) %>
+      <% } else { %>
+        <br>
+      <p>You haven't listed anything yet</p>
+      <br>
+      <% } %>
+    </main>
+    <%- include("includes/footer") %>
+    <script src="/navbar.js"></script>
+  </body>
+</html>

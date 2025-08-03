@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("includes/head") %>
+<body>
+    <main class="forms">
+        <% errors.forEach(error => { %>
+            <p><small><%= error %></small></p>
+        <% }) %>
+        <br>
+        <div class="form-box">
+            <form class="form-container" action="/loggedin" method="POST">
+            <h3 class="form-heading">Login to your account</h3>
+            <div>
+                <label for="username" name="username">Username</label>
+            <input type="text" name="username">
+            </div>
+            <div>
+                <label for="password" name="password">Password</label>
+            <input type="password" name="password">
+            </div>
+            <button class="form-btn" type="submit">Login</button>
+        </form>
+        <p class="form-line">New user? <a href="/signup">Go to signup</a></p>
+        </div>
+    </main>
+</body>
+</html>

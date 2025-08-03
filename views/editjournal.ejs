@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Journal</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="create">
+       <h3>Update your journal</h3>
+    <form class="create-forms" action="/editjournal/<%= journal.id %>" method="POST">
+      <label for="journaltitle">Title</label>
+      <input type="text" name="journaltitle" value="<%= journal.title %>"/>
+      <label for="journalcontent">Type the content</label>
+      <textarea name="journalcontent" id="journalcontent"><%= journal.content %></textarea>
+      <button type="submit">Save changes</button>
+    </form>
+    </div>
+  </body>
+</html>

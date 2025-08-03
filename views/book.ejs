@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("includes/head") %>
+  <body>
+    <%- include("includes/header") %>
+    <main class="content" id="book">
+      <h4>Here’s your little bookshelf of worlds. What’s your next escape?</h4>
+      <% if (books.length > 0) { %>
+      <% books.forEach(book => { %>
+        <div id="singlejournal">
+          <form action="/togglecheck/<%= book.id %>" method="POST">
+            <input type="checkbox" value=1 name="checked" onchange="this.form.submit()" <%= book.checked ? "checked" : "" %>>
+          </form>
+          <h3><%= book.title %></h3>
+          <p><%= book.content %></p>
+        </div>
+        <button><a href="/editbook/<%= book.id %>">Edit <i class="fa-solid fa-pen"></i></a></button>
+        <form class="delete-btn" action="/deletebook/<%= book.id %>" method="POST">
+          <button type="submit">Delete <i class="fa-solid fa-trash"></i></button>
+        </form>
+      <% }) %>
+      <% } else { %>
+      <p>You haven't listed anything yet</p>
+      <% } %>
+      <p class="quotes">
+        <i>“A reader lives a thousand lives before he dies. The man who never reads lives only one.”</i>
+        <p>— George R.R. Martin</p>
+      </p>
+      <button class="create-btn"><a href="/createbook">List a book</a></button>
+    </main>
+    <%- include("includes/footer") %>
+  </body>
+</html>

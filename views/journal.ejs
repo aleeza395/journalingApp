@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("includes/head") %>
+  <body>
+    <%- include("includes/header") %>
+    <main class="content" id="journal">
+      <h4>Welcome to your thoughts. Write it all down — no filters, no judgment.</h4>
+      <% if (journals.length > 0) { %>
+      <% journals.forEach(journal => { %>
+        <div id="singlejournal">
+          <h3><%= journal.title %></h3>
+          <p><%= journal.content %></p>
+        </div>
+        <button><a href="/editjournal/<%= journal.id %>">Edit <i class="fa-solid fa-pen"></i></a></button>
+        <form class="delete-btn" action="/deletejournal/<%= journal.id %>" method="POST">
+          <button type="submit">Delete <i class="fa-solid fa-trash"></i></button>
+        </form>
+      <% }) %>
+      <% } else { %>
+      <p>You haven't write anything yet</p>
+      <% } %>
+      <p class="quotes">
+        <i>“Journal writing is a voyage to the interior.”</i>
+        <p>— Christina Baldwin</p>
+      </p>
+      <button class="create-btn"><a href="/createjournal">Write a journal</a></button>
+    </main>
+    <%- include("includes/footer") %>
+  </body>
+</html>

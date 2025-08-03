@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List books</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="create">
+      <h3>Which book is on your list now?</h3>
+    <form class="create-forms" action="/createbook" method="POST">
+      <label for="booktitle">Title</label>
+      <input type="text" name="booktitle" />
+      <label for="bookcontent">Wanna write something about the book?</label>
+      <textarea name="bookcontent" id="bookcontent"></textarea>
+      <button type="submit">Save</button>
+    </form>
+    </div>
+  </body>
+</html>

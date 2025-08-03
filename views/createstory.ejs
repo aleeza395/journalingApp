@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write story</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="create">
+      <h3>What's on your mind?</h3>
+    <form class="create-forms" action="/createstory" method="POST">
+      <label for="storytitle">Title</label>
+      <input type="text" name="storytitle" />
+      <label for="storycontent">Type the content</label>
+      <textarea name="storycontent" id="storycontent"></textarea>
+      <button type="submit">Save</button>
+    </form>
+    </div>
+  </body>
+</html>

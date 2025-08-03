@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="create">
+      <h3>Update your booklist</h3>
+    <form class="create-forms" action="/editbook/<%= book.id %>" method="POST">
+      <label for="booktitle">Title</label>
+      <input type="text" name="booktitle" value="<%= book.title %>"/>
+      <label for="bookcontent">Type the content</label>
+      <textarea name="bookcontent" id="bookcontent"><%= book.content %></textarea>
+      <button type="submit">Save changes</button>
+    </form>
+    </div>
+  </body>
+</html>

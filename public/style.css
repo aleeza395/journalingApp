@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.homediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    background-color: rgb(119, 26, 119);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#login-btn {
+    margin-top: 2rem;
+    background-color: rgb(119, 26, 119);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    border-radius: 0.5rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+} 
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6rem;
+    width: 100%;
+    background-color: rgb(119, 26, 119);
+    list-style: none;
+    position: fixed;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+}
+
+.menu-icon {
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    font-weight: 550;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 760px) {
+    .menu-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 30%;
+        position: absolute;
+        background-color: rgb(119, 26, 119);
+        right: 3rem;
+        top: 6rem;
+        padding: 1rem 2rem 1rem 2rem;
+        line-height: 2rem;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+#logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+}
+
+.content {
+    padding-top: 7rem;
+    padding-left: 2rem;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100%;
+}
+
+.form-box {
+    display: flex;
+    height: 30rem;
+    width: 40rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(119, 26, 119);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+    display: flex;
+    height: 25rem;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    display: block;
+    width: 14rem;
+    height: 2.5rem;
+    margin: 1rem 0rem 1rem 0rem;
+    border-radius: 0.5rem;
+    padding: 0rem 0.6rem 0rem 0.6rem;
+}
+
+label {
+    color: #fff;
+}
+
+.form-heading {
+    color: #fff;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.form-btn {
+    border: 2px solid #fff;
+    width: 5rem;
+}
+
+button {
+    color: #fff;
+    background-color: rgb(119, 26, 119);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.form-line {
+    color: #fff;
+}
+
+@media screen and (max-width : 680px){
+    .form-box {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width : 520px){
+    .form-box {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width : 420px){
+    .form-box {
+        width: 18rem;
+    }
+}
+
+footer {
+    background-color: rgb(119, 26, 119);
+    position: static;
+    bottom: 0;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100%;
+}
+
+#singlejournal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #9F86C0;
+  color: #fff;
+  margin: 3rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  #singlejournal {
+    width: 90%;
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #singlejournal {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}
+
+.delete-btn {
+    display: inline;
+}
+
+.home-content {
+    display: flex;
+    height: 160vh;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.features {
+    width: 70%;
+    margin: 2rem;
+    background-color: #9F86C0;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 5rem;
+    padding: 2rem;
+    color: #fff;
+}
+
+#features-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#features-box h2 {
+    width: 100%;
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+}
+
+@media screen and (max-width : 680px) {
+    .home-content p, #features-box h2{
+        text-align: center;
+        margin: 0.5rem 2rem 0.5rem 2rem;
+    } 
+    .features {
+        height: fit-content;
+    }
+    .home-content {
+        height: fit-content;
+    }
+    .homediv h1 {
+        text-align: center;
+        margin: 0.5rem 2rem 0.5rem 2rem;
+    }
+    .features h3 {
+        margin-bottom: 1rem;
+    }
+}
+
+.quotes, .create-btn {
+    margin: 2rem;
+}
+
+.content {
+    min-height: 100vh;
+}
+
+.create-forms label{
+    color: black;
+}
+
+.create h3 {
+    background-color: rgb(119, 26, 119);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.create-forms {
+    margin: 4rem;
+}
+
+.create-forms input, .create-forms textarea {
+    width: 90%;
+    display: block;
+    margin: 1rem 0 1rem 0;
+}
+
+.create-forms label {
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.create-forms textarea {
+    height: 18rem;
+    width: 91%;
+}
+
+.create-forms input:focus {
+    outline: none;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Story</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="create">
+      <h3>Edit your story</h3>
+    <form class="create-forms" action="/editstory/<%= story.id %>" method="POST">
+      <label for="storytitle">Title</label>
+      <input type="text" name="storytitle" value="<%= story.title %>"/>
+      <label for="storycontent">Type the content</label>
+      <textarea name="storycontent" id="storycontent"><%= story.content %></textarea>
+      <button type="submit">Save changes</button>
+    </form>
+    </div>
+  </body>
+</html>

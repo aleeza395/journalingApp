@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("includes/head") %>
+  <body>
+    <%- include("includes/header") %>
+    <main class="content" id="story">
+      <h4>Your stories are waiting to be told. The blank page is your playground.</h4>
+      <% if (stories.length > 0) { %>
+      <% stories.forEach(story => { %>
+        <div id="singlejournal">
+          <h3><%= story.title %></h3>
+          <p><%= story.content %></p>
+        </div>
+        <button><a href="/editstory/<%= story.id %>">Edit <i class="fa-solid fa-pen"></i></a></button>
+        <form class="delete-btn" action="/deletestory/<%= story.id %>" method="POST">
+          <button type="submit">Delete <i class="fa-solid fa-trash"></i></button>
+        </form>
+      <% }) %>
+      <% } else { %>
+      <p>You haven't write anything yet</p>
+      <% } %>
+      <p class="quotes">
+        <i>“You can make anything by writing.”</i>
+       <p> — C.S. Lewis</p>
+      </p>
+      <button class="create-btn"><a href="/createstory">Write a story</a></button>
+    </main>
+    <%- include("includes/footer") %>
+  </body>
+</html>
